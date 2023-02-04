@@ -1,9 +1,9 @@
 import numpy as np
 
-def simple_predict(x, theta):
+def simple_predict(x, theta, dtype=np.float64):
     if len(x) == 0 or len(theta) == 0: return None
     if len(x.shape) != 1 or len(theta.shape) != 1: return None
-    y_hat = np.array(theta[0] + theta[1] * x, dtype=float)
+    y_hat = np.array(theta[0] + theta[1] * x, dtype=dtype)
     return y_hat
 
 def main():
