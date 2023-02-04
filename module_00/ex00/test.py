@@ -1,5 +1,6 @@
 from matrix import Matrix
 from matrix import Vector
+import numpy as np
 
 def main():
 
