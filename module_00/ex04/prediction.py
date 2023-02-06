@@ -5,7 +5,7 @@ tools = SourceFileLoader("tools", "../ex03/tools.py").load_module()
 
 def predict_(x, theta):
     if len(x) == 0 or len(theta) == 0: return None
-    if len(x.shape) != 1 or len(theta.shape) != 2: return None
+    # if len(x.shape) != 1 or len(theta.shape) != 2: return None
     x_ = tools.add_intercept(x)
     y_hat = np.dot(x_, theta)
     return y_hat
