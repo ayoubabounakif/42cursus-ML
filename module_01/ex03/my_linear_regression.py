@@ -53,6 +53,13 @@ class MyLinearRegression:
     if (isinstance(y, np.ndarray) == False or isinstance(y_hat, np.ndarray) == False): return None
     if y.size == 0 or y_hat.size == 0 or y.shape != y_hat.shape: return None
     return np.sum(self.loss_elem_(y, y_hat)) / (2 * y.size)
+
+  # Static Methods
+  @staticmethod
+  def mse_(y, y_hat):
+    if (isinstance(y, np.ndarray) == False or isinstance(y_hat, np.ndarray) == False): return None
+    if y.size == 0 or y_hat.size == 0 or y.shape != y_hat.shape: return None
+    return np.sum((y_hat - y) ** 2) / (y.size)
     
 def main():
   x = np.array([[12.4956442], [21.5007972], [31.5527382], [48.9145838], [57.5088733]])
