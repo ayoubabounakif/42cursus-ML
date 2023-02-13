@@ -41,6 +41,7 @@ def main():
   theta = np.array([1, 1], dtype=np.float64).reshape((-1, 1))
 
   theta1 = fit_(x, y, theta, alpha=5e-8, max_iter=1500000)
+
   print('----- Calculations Done ------')
   print(f'theta1:\n{theta1}') # array([[1.40709365], [1.1150909 ]])
   print('-----')
