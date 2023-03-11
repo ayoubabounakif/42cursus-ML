@@ -1,8 +1,12 @@
 import numpy as np
 
 def simple_predict(x, theta):
-    pass
-
+    m = x.shape[0]
+    y_hat = np.zeros((m, 1))
+    for i in range(m):
+        y_hat[i] = np.sum(theta.T[:,1:] * x[i]) + theta[0]
+    return y_hat
+        
 def main():
     x = np.arange(1,13).reshape((4,-1))
     theta1 = np.array([5, 0, 0, 0]).reshape((-1, 1))
